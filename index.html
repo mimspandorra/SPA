@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MiM Andorra · Spa</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#f8f4ef">
+<meta name="theme-color" content="#d1bca8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     --ink:#2a2724;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{background:#f8f4ef}
+  html{background-color:#ae9c88;min-height:100%}
   body{
     position:relative;color:var(--ink);
     font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;
@@ -29,7 +29,9 @@
 
   /* Foto de fondo difuminada, casi blanca */
   .bg{
-    position:fixed;inset:0;z-index:-1;
+    position:fixed;z-index:-1;left:0;right:0;
+    top:calc(-1 * env(safe-area-inset-top, 0px) - 80px);
+    bottom:calc(-1 * env(safe-area-inset-bottom, 0px) - 80px);
     background:url("spa.jpg") center 35% / cover no-repeat;
     filter:saturate(1.25) contrast(1.03);
   }
