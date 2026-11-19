@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MiM Andorra · Spa</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f8f4ef">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#ffffff;
+    --beige:#efe7dc;
+    --beige-dark:#b89a72;
+    --ink:#2a2724;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:#f8f4ef}
+  body{
+    position:relative;color:var(--ink);
+    font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    display:flex;align-items:center;justify-content:center;
+    min-height:100vh;min-height:100dvh;
+    padding:40px 24px calc(32px + env(safe-area-inset-bottom));
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* Foto de fondo difuminada, casi blanca */
+  .bg{
+    position:fixed;inset:0;z-index:-1;
+    background:url("spa.jpg") center 35% / cover no-repeat;
+    filter:saturate(1.25) contrast(1.03);
+  }
+  .bg::after{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 75% 60% at 50% 48%, rgba(248,240,229,.72) 0%, rgba(246,236,222,.55) 55%, rgba(240,226,206,.22) 100%);
+  }
+
+  main{width:100%;max-width:360px;text-align:center}
+
+    .logo{display:block;width:92%;max-width:340px;height:auto;margin:0 auto}
+
+  .rule{width:1px;height:38px;background:var(--beige-dark);margin:30px auto 28px}
+
+  .langs{display:flex;flex-direction:column;gap:12px}
+  .langs a{
+    display:block;text-decoration:none;color:var(--ink);
+    background:rgba(236,222,202,.88);
+    border:1px solid rgba(184,158,120,.45);border-radius:2px;
+    padding:16px 20px;font-size:21px;letter-spacing:.08em;
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    transition:background .25s,border-color .25s;
+    -webkit-tap-highlight-color:transparent;
+  }
+  footer{
+    margin-top:40px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;
+    color:#7d6447;padding-left:.22em;font-weight:400;
+  }
+  .langs a:hover,.langs a:active{background:rgba(255,255,255,.9);border-color:var(--beige-dark)}
+</style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <main>
+    <img class="logo" src="logo.png" alt="MiM Andorra · Member of Meliá Collection">
+    <div class="rule"></div>
+
+    <nav class="langs">
+      <a href="https://dam.melia.com/melia/file/ig3suMSFnH9xocRSJRgA.pdf" lang="es">Español</a>
+      <a href="catalogo-ca.pdf" lang="ca">Català</a>
+      <a href="https://dam.melia.com/melia/file/XsDEXzgYjcYJq3zzKvdN.pdf" lang="en">English</a>
+      <a href="https://dam.melia.com/melia/file/UQ3zWfLDKNwuRSZvPrFu.pdf" lang="fr">Français</a>
+    </nav>
+
+    <footer>Natura Bissé</footer>
+  </main>
+</body>
+</html>
